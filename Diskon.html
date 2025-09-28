@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Diskon</title>
+    <script lang="JavaScript">
+        function diskon() {
+            let A = parseFloat(prompt("Masukkan total belanja: "));
+
+            if (A > 100000) {
+                console.log("Uang yang anda berikan sebesar: " + A);
+                console.log("Selamat anda dapat diskon sebesar 15%");
+                let total = A - (A * 0.15);
+                console.log("Total barang kamu jadi :" + total);
+            } else if (A > 50000) {
+                console.log("Uang yang anda berikan sebesar: " + A);
+                console.log("Selamat anda dapat diskon sebesar 10%");
+                let total = A - (A * 0.10);
+                console.log("Total barang Kamu jadi :" + total);
+            } else {
+                console.log("Uang yang anda berikan sebesar: " + A);
+                console.log("Total belanja kamu jadi :" + A);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="diskon()">Hitung Diskon</button>
+</body>
+</html>
