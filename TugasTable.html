@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Tabel (Tugas Sesi 3 PBP)</title>
+    </head>
+    <body>
+        <h2>Tabel Nilai Siswa</h2>
+        <div id="Tabel">
+            
+        </div>
+
+        <script lang="JavaScript">
+            let data = [
+                {NO: 1, nama: "Asep", tugas: 80, uts: 95, uas: 85, na: 0},
+                {NO: 2, nama: "Iwan", tugas: 75, uts: 75, uas: 90, na: 0},
+                {NO: 3, nama: "Cepi", tugas: 70, uts: 80, uas: 90, na: 0},
+                {NO: 4, nama: "Agus", tugas: 65, uts: 40, uas: 55, na: 0},
+                {NO: 5, nama: "Dadang", tugas: 60, uts: 70, uas: 60, na: 0},
+            ];
+
+            let tabel = "<table border='1'>";
+            tabel += "<tr><th>NO</th><th>NAMA SISWA</th><th>TUGAS</th><th>UTS</th><th>UAS</th><th>NA</th></tr>";
+
+            for (let i = 0; i < data.length; i++){
+                let nilaiakhir = data[i].na;
+                nilaiakhir = (0.4*data[i].tugas) + (0.3*data[i].uts + (0.3*data[i].uas));
+                tabel += "<tr><td>" + data[i].NO + "</td><td>" + data[i].nama + "</td><td>" + data[i].tugas + "</td><td>" + data[i].uts + "</td><td>" + data[i].uas + "</td><td>" + nilaiakhir + "</td></tr>";
+            }
+            tabel += "</table>"
+
+            document.getElementById("Tabel").innerHTML = tabel;
+        </script>
+    </body>
+</html>
